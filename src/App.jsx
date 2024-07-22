@@ -13,7 +13,7 @@ function App() {
 
   function fetchFromLocalStorage() {
     const doesNotesExist = localStorage.getItem("notes");
-    if (doesNotesExist.length > 0) {
+    if (doesNotesExist && doesNotesExist.length > 0) {
       try {
         const savedNotes = JSON.parse(doesNotesExist);
         return savedNotes;
